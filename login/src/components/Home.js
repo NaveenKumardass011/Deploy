@@ -10,7 +10,7 @@ const Home = ({setStatus}) => {
   axios.defaults.withCredentials=true
   useEffect(()=>{
     
-      axios.get(`${process.env.REACT_APP_BACKEND_URL}home`)
+      axios.get(`${"https://login-backend-4jnfdo8cz-naveens-projects-87be56c7.vercel.app/"}home`)
       .then((res)=>{
         console.log(res);
         if(!res.data.error){
