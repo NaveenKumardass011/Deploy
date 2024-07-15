@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URL)
     console.log(err.message)}
 )
 app.use(cors({
-    origin:[process.env.FONTEND_URL],
+    origin:["https://deploy-two-tan.vercel.app/"],
     methods:["GET","POST"],
     credentials:true
     
