@@ -9,7 +9,7 @@ const Login = ({setStatus}) => {
     axios.defaults.withCredentials=true
 
     const loginRequest=()=>{
-      axios.post(`${process.env.REACT_APP_BACKEND_URL}login`,{email,password})
+      axios.post(`${"https://login-backend-4jnfdo8cz-naveens-projects-87be56c7.vercel.app/"}login`,{email,password})
       .then((res)=>{
         if(res){
             if(res.data.result === "Success"){
