@@ -9,7 +9,7 @@ const Signup = ({setStatus}) => {
   const navigate=useNavigate()
 
 const signupData=async()=>{
-    axios.post(`${"https://login-backend-4jnfdo8cz-naveens-projects-87be56c7.vercel.app/"}register`,{username,email,password})
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`,{username,email,password})
     .then((res)=>{
       if(res.data.error){
         return setStatus(res.data.error)
