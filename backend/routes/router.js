@@ -5,6 +5,10 @@ const jwt=require('jsonwebtoken')
 const bycrypt=require('bcrypt')
 const salt=10
 
+Router.get('/',(req,res)=>{
+  res.send("success")
+})
+
 Router.post('/register',async(req,res)=>{
    const{username,email,password}=req.body
    const bycPassword= await bycrypt.hash(password.toString(),salt)
